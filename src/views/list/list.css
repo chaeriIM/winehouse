@@ -1,0 +1,77 @@
+html,
+body {
+  height: 100%;
+  /* 전체 페이지 좁게 가운데 정렬하는 코드*/
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* main */
+
+.category-container {
+  margin: 3rem 3rem 0 8rem;
+}
+
+.category-name {
+  color: #554054;
+  box-shadow: inset 0 -15px 0 #e6dde6;
+}
+
+.orderList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 70vh;
+  margin: 3rem;
+}
+
+.listFont {
+  font-size: 2rem;
+  color: #955591;
+}
+
+#productPhoto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.photoBox {
+  margin: 20px;
+}
+
+.photoBox img {
+  width: 150px;
+  height: 300px;
+  margin: 20px;
+  filter: brightness(1);
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.photoBox img:hover {
+  filter: brightness(0.8);
+  cursor: pointer;
+}
+
+#data-name {
+  color: #554054;
+  font-size: 0.9rem;
+  pointer-events: none;
+}
+
+#data-price {
+  color: #929292;
+  font-size: 0.8rem;
+  pointer-events: none;
+}
+
+.dataRow {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10px 20px 10px 20px;
+  font-weight: bold;
+}

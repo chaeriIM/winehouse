@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 const User = require('../db/models/user');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
@@ -80,10 +82,11 @@ class UserService {
 
     // 로그인 성공 후 토큰 반환
     const secretKey = process.env.JWT_SECRET_KEY; // env 설정 필요
-    return jwt.sign({
+    const userToken = jwt.sign({
       userId: userData._id,
       isAdmin: false,
     }, secretKey);
+    return userToken;
   }
 
   async comparePasswords(inputPassword, hashedPassword) {

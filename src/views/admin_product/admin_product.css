@@ -1,0 +1,89 @@
+.columns {
+  margin: 0 20px;
+}
+
+.card {
+  width: 350px;
+  height: auto;
+}
+
+.imgDiv {
+  display: flex;
+  justify-content: center;
+}
+
+.imgDiv img {
+  width: 150px;
+  height: 300px;
+  border-radius: 10px;
+  margin: 7px 11px;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+#bottomBtn {
+  border-radius: 10px;
+}
+
+.buttonBox {
+  display: flex;
+  justify-content: center;
+}
+
+.products-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 20px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.field {
+  display: flex;
+  justify-content: space-between;
+}
+
+#imgField {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+#categoryBtn {
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  border-color: transparent;
+  color: rgba(0,0,0,.7);
+  font-size: 1em;
+  font-family: 'GmarketSansMedium';
+  outline: none;
+  height: 40px;
+  margin: 0 20px 0 20px;
+  width: 15%;
+  text-align: center;
+  cursor: pointer;
+}
+
+#categoryBtn:hover {
+  background-color: #eee;
+  border-color: transparent;
+  color: rgba(0,0,0,.7);
+}
+
+.option {
+  text-align-last: center;
+  padding: 0;
+}
+
+.card-header-title {
+  justify-content: center;
+  /* color: #af66aa; */
+  font-weight: bold;
+}

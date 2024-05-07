@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WineHouse</title>
+  <!-- bulma css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <!-- fontawesome icon -->
+  <script src="https://kit.fontawesome.com/20edfc9a47.js" crossorigin="anonymous"></script>
+  <!-- custom css, js -->
+  <link rel="stylesheet" href="update.css">
+  <link rel="stylesheet" href="/stylesheets/global.css">
+  <script src="update.js" type="module" defer></script>
+  <script src="/javascripts/global.js" type="module" defer></script>
+</head>
+
+<body>
+  <!-- header -->
+  <div id="header-container"></div>
+
+  <main role="main">
+    <div class="main">
+      <div class="update">
+        <p class="title">정보 수정</p>
+        <form class="box">
+          <div class="field">
+            <label class="label">이름</label>
+            <div class="control">
+              <input id="nameInput" class="input" type="text" placeholder="이름을 입력해주세요">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">이메일</label>
+            <div class="control">
+              <input id="emailInput" class="input" type="email" placeholder="이메일을 입력해주세요">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">비밀번호</label>
+            <div class="control">
+              <input id="passwordInput" class="input" type="password" placeholder="비밀번호를 입력해주세요.">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">비밀번호 확인</label>
+            <div class="control">
+              <input id="confirmPasswordInput" class="input" type="password" placeholder="비밀번호를 다시 한 번 입력해주세요.">
+              <p id="passwordMatchMessage" class="help is-danger" style="display: none;">비밀번호가 일치하지 않습니다.</p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">나이</label>
+            <div class="control">
+              <input id="ageInput" class="input" type="text" placeholder="나이를 입력해주세요">
+              <!-- <p id="ageErrorMessage" class="help is-danger" style="display: none;">나이는 숫자로만 입력해주세요.</p> -->
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">주소</label>
+            <div class="control">
+              <input id="addressInput" class="input" type="text" placeholder="주소를 입력해주세요.">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">전화 번호</label>
+            <div class="control">
+              <input id="telInput" class="input" type="text" placeholder="전화번호를 입력해주세요.">
+            </div>
+          </div>
+
+
+          <div class="buttons">
+            <button id="editProfileButton" class="button is-primary">수정하기</button>
+            <button id="withdrawButton" class="button is-primary">탈퇴하기</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- footer -->
+  <div id="footer-container"></div>
+</body>
+
+</html>

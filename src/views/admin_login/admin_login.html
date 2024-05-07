@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WineHouse</title>
+  <!-- bulma css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <!-- fontawesome icon -->
+  <script src="https://kit.fontawesome.com/20edfc9a47.js" crossorigin="anonymous"></script>
+  <!-- custom css, js -->
+  <link rel="stylesheet" href="admin_login.css">
+  <link rel="stylesheet" href="/stylesheets/global.css">
+  <script src="admin_login.js" type="module" defer></script>
+</head>
+<body>
+<div class="main">
+  <div class="managerLogin">
+    <p class="title">관리자 로그인</p>
+    <form class="loginBox">
+        <div class="field">
+            <label class="label">이메일</label>
+            <div class="control">
+                <input class="input" type="email" placeholder="이메일을 입력해주세요" id="username">
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">비밀번호</label>
+            <div class="control">
+                <input class="input" type="password" placeholder="비밀번호를 입력해주세요" id="password">
+            </div>
+        </div>
+
+        <div class="buttonBox">
+          <!--버튼 클릭시 이벤트 작동하는 기능 적용위해서 이번만 input type button 사용-->
+          <button class="button is-primary is-fullwidth" id="manager-login">로그인</button>
+        </div>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>

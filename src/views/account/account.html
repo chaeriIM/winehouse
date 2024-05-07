@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WineHouse</title>
+  <!-- bulma css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <!-- fontawesome icon -->
+  <script src="https://kit.fontawesome.com/20edfc9a47.js" crossorigin="anonymous"></script>
+  <!-- custom css, js -->
+  <link rel="stylesheet" href="account.css">
+  <link rel="stylesheet" href="/stylesheets/global.css">
+  <script type="text/javascript" src="account.js" defer></script>
+  <script src="/javascripts/global.js" type="module" defer></script>
+</head>
+
+<body>
+  <!-- header -->
+  <div id="header-container"></div>
+
+  <div class="main">
+
+    <div class="account">
+      <p class="title">회원가입</p>
+      <form class="box">
+        <div class="field">
+          <label class="label">이름</label>
+          <div class="control">
+            <input id="nameInput" class="input" type="text" placeholder="이름을 입력해주세요">
+            <p id="nameErrorMessage" class="help is-danger" style="display: none;">올바른 이름을 입력해주세요.</p>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">이메일</label>
+          <div class="control">
+            <input id="emailInput" class="input" type="email" placeholder="이메일을 입력해주세요">
+            <p id="emailErrorMessage" class="help is-danger" style="display: none;">올바른 이메일 주소를 입력해주세요.</p>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">비밀번호</label>
+          <div class="control">
+            <input id="passwordInput" class="input" type="password" placeholder="비밀번호를 입력해주세요."
+              oninput="validatePassword()">
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">비밀번호 확인</label>
+          <div class="control">
+            <input id="confirmPasswordInput" class="input" type="password" placeholder="비밀번호를 다시 한 번 입력해주세요."
+              oninput="validatePassword()">
+            <p id="passwordMatchMessage" class="help is-danger" style="display: none;">비밀번호가 일치하지 않습니다.</p>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">주소</label>
+          <div class="control">
+            <input id="addressInput" class="input" type="text" placeholder="주소를 입력해주세요.">
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">나이</label>
+          <div class="control">
+            <input id="ageInput" class="input" type="text" placeholder="나이를 입력해주세요" oninput="validateAge()">
+            <p id="ageErrorMessage" class="help is-danger" style="display: none;">나이는 숫자로만 입력해주세요.</p>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">전화 번호</label>
+          <div class="control">
+            <input id="phoneNumberInput" class="input" type="text" placeholder="전화번호를 '-'포함 하여 입력해주세요">
+            <p id="phoneNumberErrorMessage" class="help is-danger" style="display: none;">전화번호는 숫자로만 입력해주세요.</p>
+          </div>
+        </div>
+
+        <button id="editLoginButton" class="button is-primary mt-3">회원가입</button>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div id="footer-container"></div>
+
+</body>
+
+</html>

@@ -12,7 +12,7 @@ const imageMiddleware = require('../middlewares/imageMiddleware');
 const Product = require('../db/models/product');
 const Category = require('../db/models/category');
 const Image = require('../db/models/image');
-const image = require('../db/models/image');
+const { compareSync } = require('bcrypt');
 
 const productRouter = Router();
 
@@ -39,17 +39,24 @@ productRouter.get('/:categoryId', asyncHandler(async (req, res, next) => {
   await ProductService.deleteProductWithNoImage();
   // 해당 카테고리 상품 목록 호출
   const productListOfCategory = await ProductService.getProductListByCategory(categoryId);
-  // 목록의 사진 호출
-  let imageList = [];
-  productListOfCategory.data.forEach( async product => {
-    imageList.push(await ImageService.getImageOfProduct(product._id));
-  })
   // 성공 상태 핸들링
   res.status(200).json({
     status: 200,
     message: '카테고리별 상품 목록 조회 성공',
     data: productListOfCategory,
-    image: imageList,
+  });
+}));
+
+// 이미지 ID로 이미지 확인
+productRouter.get('/image/:imageId', asyncHandler(async (req, res, next) => {
+  const { imageId } = req.params;
+  // 이미지 호출
+  const imageOfImageId = await ImageService.getImageOfImage(imageId);
+  // 성공 상태 핸들링
+  res.status(200).json({
+    status: 200,
+    message: '이미지 호출 성공',
+    data: imageOfImageId,
   });
 }));
 
@@ -79,6 +86,7 @@ productRouter.post('/',
   authAdminMiddleware,
   asyncHandler(async (req, res, next) => {
   const data = JSON.parse(req.body.product_data);
+  await console.log(data);
   // 상품 빈 필드 확인
   await ProductService.checkProductField(data);
   // 카테고리 유무 확인
@@ -88,13 +96,13 @@ productRouter.post('/',
   // 이미지 업로드 진행
   const image = await ImageService.uploadProductImage(productAdding._id, req.file);
   // 상품에 이미지 ID 정보 삽입
-  const updatedProduct = await ProductService.setProduct(productId,req.body, image._id);
+  const updatedProduct = await ProductService.setProduct(productAdding._id ,req.body, image._id);
   // 성공 상태 핸들링
   res.status(201).json({
     status: 201,
     message: '상품 추가 성공',
     data: {
-      addedProdcut: productAdding,
+      addedProdcut: updatedProduct,
       uploadedImage: image,
     }
   });
@@ -111,9 +119,10 @@ productRouter.patch('/:productId',
   // 카테고리 유무 확인 (있다면)
   if (req.params.category_id) await CategoryService.checkCategoryId(req.params.category_id);
   // 이미지 수정 (있다면)
+  let image = {};
   if (req.file) {
     await ImageService.deleteProductImage(productId.image_id);
-    const image = await ImageService.uploadProductImage(productId, req.file);
+    image = await ImageService.uploadProductImage(productId, req.file);
   }
   // 상품 수정 진행
   const updatedProduct = await ProductService.setProduct(productId,req.body, image._id);

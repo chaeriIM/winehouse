@@ -1,0 +1,47 @@
+/* login.css */
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* main */
+.main {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+}
+
+.box {
+    width: 700px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    color: #af66aa;
+    margin: 20px;
+    text-align: center;
+}
+
+.buttons.are-medium {
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registerText {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.registerText a {
+    color: #af66aa;
+}

@@ -1,0 +1,14 @@
+.columns {
+  margin: 0 20px;
+}
+
+.add-button {
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}

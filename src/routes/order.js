@@ -35,7 +35,7 @@ orderRouter.get('/',
 }));
 
 // 특정 유저 주문 목록 확인
-orderRouter.get('/',
+orderRouter.get('/user/',
   authMiddleware,
   asyncHandler(async (req, res, next) => {
   // 유효한 유저인지 확인

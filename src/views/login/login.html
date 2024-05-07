@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WineHouse</title>
+  <!-- bulma css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <!-- fontawesome icon -->
+  <script src="https://kit.fontawesome.com/20edfc9a47.js" crossorigin="anonymous"></script>
+  <!-- custom css, js -->
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="/stylesheets/global.css">
+  <script type="text/javascript" src="login.js"></script>
+  <script src="/javascripts/global.js" type="module" defer></script>
+</head>
+
+<body>
+  <!-- header -->
+  <div id="header-container"></div>
+
+  <div class="main">
+    <div class="Login">
+      <p class="title">로그인</p>
+      <form class="box">
+        <div class="field">
+          <label class="label">이메일</label>
+          <div class="control">
+            <input class="input" type="email" placeholder="이메일을 입력해주세요">
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">비밀번호</label>
+          <div class="control">
+            <input class="input" type="password" placeholder="비밀번호를 입력해주세요.">
+          </div>
+        </div>
+
+        <div class="buttons">
+          <button id="editProfileButton" class="button is-primary is-fullwidth">로그인</button>
+        </div>
+        <div class="registerText">
+          <p>회원이 아니신가요? <a href="/account">회원가입</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div id="footer-container"></div>
+
+</body>
+
+</html>

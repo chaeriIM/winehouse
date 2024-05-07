@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 const createError = require('http-errors');
 const express = require('express');
 const mongoose = require('mongoose');
@@ -46,11 +48,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
-// app.use('/', viewsRouter);
+app.use('/', viewsRouter);
 app.use('/user', userRouter);
 app.use('/category', categoryRouter);
 app.use('/product', productRouter);
-app.use('/order', orderRouter);
+app.use('/api-order', orderRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

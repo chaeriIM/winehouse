@@ -1,0 +1,82 @@
+/* main */
+.columns {
+    margin: 0 20px;
+}
+
+.real_main {
+    height: 100%;
+    margin: 0 auto;
+    width: 83.33333%;
+}
+
+.title {
+    font-size: 1.5em;
+    font-weight: normal;
+    margin: 20px;
+}
+
+.order-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.box {
+    width: 800px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    justify-content: space-around;
+    margin: 20px;
+    padding: 10px;
+}
+
+#infoBox {
+    margin: 20px;
+    padding: 10px;
+}
+
+#photo {
+    width: 15%;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cancelBtn {
+    margin: 20px;
+    cursor: pointer;
+    background-color: hsl(0deg, 0%, 100%);
+    border-color: hsl(0deg, 0%, 86%);
+    border-radius: 0.375em;
+    color: red;
+}
+
+.select {
+    margin: 20px;
+    cursor: pointer;
+    background-color: hsl(0deg, 0%, 100%);
+    border-color: hsl(0deg, 0%, 86%);
+    border-radius: 0.375em;
+}
+
+select:focus {
+    outline: none;
+}
+
+.buttonBox {
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: black;
+    font-size: 0.9em;
+}

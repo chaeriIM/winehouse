@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WineHouse</title>
+  <!-- bulma css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <!-- fontawesome icon -->
+  <script src="https://kit.fontawesome.com/20edfc9a47.js" crossorigin="anonymous"></script>
+  <!-- custom css, js -->
+  <link rel="stylesheet" href="./admin_category.css">
+  <link rel="stylesheet" href="/stylesheets/global.css">
+  <!-- JavaScript 파일 -->
+  <script src="admin_category.js" type="module" defer></script>
+  <script src="/javascripts/admin_header.js" type="module" defer></script>
+</head>
+
+<body>
+  <!-- admin header -->
+  <div id="admin-header-container"></div>
+
+  <!-- admin menu -->
+  <section class="columns">
+
+    <aside class="column section">
+      <p class="menu-label">Administration</p>
+      <ul class="menu-list">
+        <li>
+          <a href="/admin_order">
+            <span class="icon"><i class="fa-solid fa-bag-shopping"></i></span> 주문 관리
+          </a>
+        </li>
+        <li>
+          <a href="/admin_product">
+            <span class="icon"><i class="fa-solid fa-wine-bottle"></i></span> 상품 관리
+          </a>
+          <ul>
+            <li><a href="/admin_add">상품 추가</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="/admin_category" class="is-active">
+            <span class="icon"><i class="fa-solid fa-list"></i></span> 카테고리
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <div class="column is-10">
+      <div class="section">
+        <div class="add-button">
+          <button id="addBtn" class="button is-info">추가</button>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <p class="card-header-title">카테고리 - 와인 타입</p>
+          </div>
+
+          <div class="card-content">
+            <div class="content"><!-- 카테고리 목록 --></div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 카테고리 추가 모달 -->
+  <div class="modal" id="categoryAddModal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <div class="box">
+        <h3 class="title">카테고리 추가</h3>
+        <div class="field">
+          <label class="label">와인 타입</label>
+          <div class="control">
+            <input class="input" type="text" id="categoryName">
+          </div>
+        </div>
+        <button class="button is-success" id="categoryAddBtn">추가</button>
+        <button class="button" id="modalCancelBtn">취소</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 카테고리 수정 모달 -->
+  <div class="modal" id="categoryModifyModal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <div class="box">
+        <h3 class="title">카테고리 수정</h3>
+        <div class="field">
+          <label class="label">와인 타입</label>
+          <div class="control">
+            <input class="input" type="text" id="newCategoryName">
+          </div>
+        </div>
+        <button class="button is-success" id="categoryModifyBtn">수정</button>
+        <button class="button" id="cancelBtn">취소</button>
+      </div>
+    </div>
+  </div>
+  
+</body>
+
+</html>

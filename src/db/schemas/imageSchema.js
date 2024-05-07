@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const { Schema } = require('mongoose');
 
 const ImageSchema = new Schema({

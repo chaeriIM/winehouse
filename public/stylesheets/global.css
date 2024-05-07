@@ -6,8 +6,20 @@
   font-style: normal;
 }
 
-* {
+*, input, button {
   font-family: 'GmarketSansMedium';
+}
+
+/* button */
+.button.is-primary {
+  background-color: #af66aa;
+  color: #fff;
+  transition: .4s;
+}
+
+.button.is-primary:hover {
+  background-color: #9e5e9a;
+  color: #fff;
 }
 
 /* header */

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +15,116 @@
   <script src="order.js" type="module" defer></script>
   <script src="/javascripts/global.js" type="module" defer></script>
 </head>
+
 <body>
-  <h1>주문페이지</h1>
+  <!-- header -->
+  <div id="header-container"></div>
+
+  <main class="main">
+    <main class="main1">
+      <div class="order-form info">
+        <h2>배송지 정보 입력</h2>
+        <div class="your-class-name"></div>
+        <!-- 배송지 정보 입력 부분 -->
+        <div class="field">
+          <label class="label">이름</label>
+          <div class="control">
+            <input class="input" type="text" id="nameInput" placeholder="이름을 입력하세요">
+          </div>
+        </div>
+
+        <div class="field" style="margin-bottom: 20px;">
+          <label class="label">전화번호</label>
+          <div class="control">
+            <input class="input" type="tel" id="telInput" placeholder="전화번호를 입력하세요">
+          </div>
+        </div>
+
+        <div class="field" style="margin-bottom: 20px;">
+          <label class="label">주소</label>
+          <div class="control">
+            <input class="input" type="text" id="addressInput" placeholder="주소를 입력하세요">
+          </div>
+        </div>
+
+        <div class="field" style="margin-bottom: 20px;">
+          <label class="label">요청사항</label>
+          <div class="control">
+            <div class="select">
+              <select>
+                <option>배송 시 요청사항을 선택해주세요</option>
+                <option>문 앞에 놔주세요.</option>
+                <option>경비실에 맡겨주세요.</option>
+              </select>
+            </div>
+          </div>
+        </div>
+    </main>
+    <main>
+      <!-- 주문상품 정보 부분 -->
+      <div class="product-info">
+        <div class="notice">장바구니에 담긴 상품이 없습니다.</div>
+
+        <!-- 장바구니에 담긴 상품들이 표시될 영역 -->
+        <div id="order-items"></div>
+      </div>
+    </main>
+    <main class="main2 ">
+      <div class="inner order-container">
+        <div class="order-summary">
+          <h2>주문 상품 목록</h2>
+          <ul id="order-list"></ul>
+        </div>
+        
+        <div class="payment-info">
+          <h2>결제 수단</h2>
+          <div class="your-class-name"></div>
+          <div class="payment-method" id="credit-card">
+            <input type="radio" id="creditCard" name="paymentMethod" value="creditCard">
+            <label for="creditCard">신용카드</label>
+          </div>
+
+          <div class="payment-method" id="bank-transfer">
+            <input type="radio" id="bankTransfer" name="paymentMethod" value="bankTransfer">
+            <label for="bankTransfer">무통장 입금</label>
+          </div>
+
+          <div class="payment-method" id="naver-pay">
+            <input type="radio" id="naverPay" name="paymentMethod" value="naverPay">
+            <label for="naverPay">네이버 페이</label>
+          </div>
+
+          <div class="payment-method" id="kakao-pay">
+            <input type="radio" id="kakaoPay" name="paymentMethod" value="kakaoPay">
+            <label for="kakaoPay">카카오 페이</label>
+            <div style="height: 50px;"></div>
+          </div>
+        </div>
+
+        <div class="agree-info">
+          <div class="terms-agreement">
+            <h2>약관 동의</h2>
+            <div class="your-class-name"></div>
+            <div class="checkbox-container">
+              <label for="termsAgree">동의 하시겠습니까?</label>
+              <input type="checkbox" id="termsAgree" name="termsAgree">
+            </div>
+          </div>
+          <div style="height: 50px;"></div>
+        </div>
+
+        <div class="pay-button">
+          <button class="button is-primary is-fullwidth mt-5" id="payButton">결제</button>
+          <p id="paymentErrorMessage" class="help is-danger" style="display: none;">결제 수단을 선택해주세요.</p>
+          <p id="termsErrorMessage" class="help is-danger" style="display: none;">약관에 동의해주세요.</p>
+        </div>
+      </div>
+    </main>
+
+  </main>
+
+  <!-- footer -->
+  <div id="footer-container"></div>
 </body>
+
 </html>

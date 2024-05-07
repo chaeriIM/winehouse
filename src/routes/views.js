@@ -17,5 +17,18 @@ router.use('/list', serveStatic('list'));
 router.use('/detail', serveStatic('detail'));
 router.use('/cart', serveStatic('cart'));
 router.use('/order', serveStatic('order'));
+router.use('/login', serveStatic('login'));
+router.use('/mypage', serveStatic('mypage'));
+router.use('/account', serveStatic('account'));
+router.use('/update', serveStatic('update'));
+
+
+
+router.use('/admin_login', serveStatic('admin_login'));
+router.use('/admin_order', serveStatic('admin_order'));
+router.use('/admin_update', serveStatic('admin_update'));
+router.use('/admin_add', serveStatic('admin_add'));
+router.use('/admin_category', serveStatic('admin_category'));
+router.use('/admin_product', serveStatic('admin_product'));
 
 module.exports = router;

@@ -3,13 +3,18 @@
 // 불러오기
 const Image = require('../db/models/image');
 const multer = require('multer');
-const { deleteProduct } = require('./productService');
 const storage = multer.memoryStorage()
 const upload = multer({storage:storage});
 
 class ImageService {
   constructor() {
     this.Image = Image;
+  }
+
+  // 이미지 ID에 맞는 이미지 조회
+  async getImageOfImage(imageId) {
+    const image = await this.Image.find({ _id: imageId });
+    return `<img src="data:image/${image[0].contentType};base64,${image[0].data.toString('base64')}">`;
   }
 
   // 상품 ID에 맞는 이미지 조회
@@ -19,7 +24,7 @@ class ImageService {
   }
 
   // 이미지 업로드 진행
-  async uploadProductImage(productId,reqFile) {
+  async uploadProductImage(productId, reqFile) {
     const image = new Image({
         product_id: productId,
         data: reqFile.buffer,

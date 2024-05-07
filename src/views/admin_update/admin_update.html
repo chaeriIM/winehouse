@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WineHouse</title>
+  <!-- bulma css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <!-- fontawesome icon -->
+  <script src="https://kit.fontawesome.com/20edfc9a47.js" crossorigin="anonymous"></script>
+  <!-- custom css, js -->
+  <link rel="stylesheet" href="admin_update.css">
+  <link rel="stylesheet" href="/stylesheets/global.css">
+  <script src="admin_update.js" type="module" defer></script>
+  <script src="/javascripts/admin_header.js" type="module" defer></script>
+</head>
+<body>
+  <!-- admin header -->
+  <div id="admin-header-container"></div>
+
+  <!-- admin menu -->
+  <section class="columns">
+      
+    <aside class="column section">
+      <p class="menu-label">Administration</p>
+      <ul class="menu-list">
+        <li>
+          <a href="/admin_order">
+            <span class="icon"><i class="fa-solid fa-bag-shopping"></i></span> 주문 관리
+          </a>
+        </li>
+        <li>
+          <a href="/admin_product">
+            <span class="icon"><i class="fa-solid fa-wine-bottle"></i></span> 상품 관리
+          </a>
+          <ul>
+            <li><a href="/admin_add">상품 추가</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="/admin_category">
+            <span class="icon"><i class="fa-solid fa-list"></i></span> 카테고리
+          </a>
+        </li>
+      </ul>
+    </aside>
+  
+    <div class="column is-10">
+      <div class="section">
+  
+        <div class="card">
+          <div class="card-header"><p class="card-header-title">상품 수정</p></div>
+          <form id="form" class="card-content">
+
+            <div class="upload-img">
+              <div id="img-container"></div>
+              <input id="input-img" type="file" accept="image/*">
+            </div>
+            
+            <div class="field">
+              <label for="name" class="label">이름</label>
+              <div class="control">
+                <input id="name" class="input" type="text" placeholder="이름을 입력해주세요.">
+              </div>
+            </div>
+            <div class="field">
+              <label for="price" class="label">가격</label>
+              <div class="control">
+                <input id="price" class="input" type="number" placeholder="가격을 입력해주세요.">
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">타입</label>
+              <div class="select">
+                <select id="type" name="type">
+                  <option value="" disabled selected>타입</option>
+                  <!-- 카테고리 목록 추가 -->
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="country" class="label">국가</label>
+              <div class="control">
+                <input id="country" class="input" type="text" placeholder="국가를 입력해주세요.">
+              </div>
+            </div>
+            <div class="field">
+              <label for="grape" class="label">포도 품종</label>
+              <div class="control">
+                <input id="grape" class="input" type="text" placeholder="포도 품종을 입력해주세요.">
+              </div>
+            </div>
+            <div class="field">
+              <label for="sweet" class="label">당도</label>
+              <div class="control">
+                <input id="sweet" class="input" type="number" placeholder="당도를 입력해주세요.">
+              </div>
+            </div>
+            <div class="field">
+              <label for="sour" class="label">산도</label>
+              <div class="control">
+                <input id="sour" class="input" type="number" placeholder="산미를 입력해주세요.">
+              </div>
+            </div>
+            <div class="field">
+              <label for="body" class="label">바디</label>
+              <div class="control">
+                <input id="body" class="input" type="number" placeholder="바디를 입력해주세요.">
+              </div>
+            </div>
+            <div class="field">
+              <label for="year" class="label">생산 연도</label>
+              <div class="control">
+                <input id="year" class="input" type="number" placeholder="생산 연도를 입력해주세요.">
+              </div>
+            </div>
+            
+            <button id="update-button" class="button is-fullwidth is-light mt-5">수정</button>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+    
+  </section>
+</body>
+</html>

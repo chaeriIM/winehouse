@@ -1,0 +1,112 @@
+html,
+body {
+  /* 전체 페이지 좁게 가운데 정렬하는 코드 -> auto*/
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* main */
+.inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left img {
+  width: 300px;
+  height: 500px;
+  margin: 40px;
+  padding: 10px;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.hr {
+  background-color: #d5d5d5;
+}
+
+.detailDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 500px;
+  margin: 40px;
+  padding: 10px;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.detailBox {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  width: 300px;
+}
+
+.detailRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.detailBox a {
+  margin: 10px;
+}
+
+#detailFont {
+  margin-right: 15px;
+  color: #929292;
+  font-size: 0.9em;
+  pointer-events: none;
+}
+
+#data-name,
+#data-price,
+#result,
+#data-totalPrice {
+  color: #554054;
+  font-size: 0.9em;
+  pointer-events: none;
+}
+
+hr {
+  background-color: black;
+  height: 0.1px;
+}
+
+#quantity {
+  display: flex;
+  justify-content: space-between;
+}
+
+.quantityBtn {
+  border-style: none;
+  cursor: pointer;
+}
+
+.bottom {
+  display: flex;
+  justify-content: center;
+}
+
+.bottomBox {
+  width: 900px;
+  height: auto;
+  padding: 20px;
+  margin: 10px 100px 80px 100px;
+  padding: 30px;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.detailRow progress {
+  width: 500px;
+  background-color: #d8bfd8;
+}
+
+.progress:not(:last-child) {
+  margin: 0 5px;
+}

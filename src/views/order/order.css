@@ -1,0 +1,93 @@
+.info {
+  /*디자인 */
+  font-size: 20px;
+  color: #af66aa;
+}
+
+/* main */
+h2 {
+  font-size: 1.5em;
+  width: 100%;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.order-form {
+  width: 48%;
+}
+
+.inner.order-container {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.order-summary,
+.shipping-fee,
+.total-payment {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.payment-info,
+.terms-agreement {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.main2 .payment-info,
+.main2 .terms-agreement {
+  text-align: left;
+}
+
+.main {
+  display: flex;
+  margin: 40px 80px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 25vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-container input {
+  margin-left: 10px;
+}
+
+.main1,
+.main2 {
+  min-width: 300px;
+  height: 100%;
+  flex: 1;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.your-class-name {
+  border-bottom: 5px solid #af66aa;
+  width: 100%;
+
+  margin-bottom: 50px;
+}
